@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.21.0",
     "@nanostores/react": "github:ai/react",
     "@types/google.maps": "^3.58.1",
+    "ai": "^3.4.9",
     "flowbite": "^2.5.2",
     "lucide-react": "^0.447.0",
     "next": "14.2.14",

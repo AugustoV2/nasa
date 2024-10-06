@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 
-const Airquality = () => {
+const Earthquake = () => {
   return (
     <>
       <Head>
@@ -10,16 +10,17 @@ const Airquality = () => {
       </Head>
       <div style={{ width: '100vw', height: '100vh' }}>
         <iframe
-          src="https://www.arcgis.com/apps/mapviewer/index.html?webmap=a28d5ccc504c4b129d4b42cad48c8f96"
+          src="https://api-dmo-ug5m.vercel.app/"
           width="100%"
           height="100%"
           frameBorder="0"
           allowFullScreen
         ></iframe>
-      </div>
-      
-       {/* Navbar */}
-       <div style={{
+
+
+
+        {/* Navbar */}
+        <div style={{
           position: 'absolute',
           top: 0,
           left: 0,
@@ -31,7 +32,7 @@ const Airquality = () => {
           backgroundColor: '#ffffff', // Full white
           zIndex: 1000, // Ensure the navbar is above the iframe
         }}>
-          <h1 style={{ margin: 0, fontSize: '20px', color: 'black' }}>Air Quality</h1>
+          <h1 style={{ margin: 0, fontSize: '20px', color: 'black' }}>Precipitation</h1>
         </div>
         
         {/* Sidebar */}
@@ -48,9 +49,9 @@ const Airquality = () => {
         }}>
           
         </div>
+      </div>
     </>
-    
   );
 };
 
-export default Airquality;
+export default Earthquake;
