@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { NextRequest, NextResponse } from 'next/server';
 
-const API_KEY = '03c48dae07364cabb7f121d8c1519492'; 
+const API_KEY = '03c48dae07364cd8c1519492'; 
 
 export async function POST(req: NextRequest) {
     if (req.method === 'POST') {
