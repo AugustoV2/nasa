@@ -15,21 +15,21 @@ const containerStyle: React.CSSProperties = {
 interface LocationData {
   lat: number;
   lng: number;
-  radius: number; // Radius in meters
+  radius: number; 
   title: string;
   description: string;
-  type: string; // Added type field
+  type: string; 
 }
 
 const CombinedComponent: React.FC = () => {
   const [locationError, setLocationError] = useState<string | null>(null);
   const [mapLoaded, setMapLoaded] = useState<boolean>(false);
-  const [locationInput, setLocationInput] = useState<string>(""); // To store input from Sidebar
+  const [locationInput, setLocationInput] = useState<string>(""); 
   const mapContainerRef = useRef<HTMLDivElement | null>(null);
   const map = useRef<google.maps.Map | null>(null);
   const markersRef = useRef<google.maps.Marker[]>([]);
 
-  // Custom dark mode map style
+  
   const darkModeStyle = [
     { elementType: "geometry", stylers: [{ color: "#212121" }] },
     { elementType: "labels.icon", stylers: [{ visibility: "off" }] },
@@ -139,7 +139,7 @@ const CombinedComponent: React.FC = () => {
     });
   };
 
-  // Initialize Google Maps and set user location
+
   useEffect(() => {
     const initializeMap = async () => {
       try {
@@ -154,7 +154,7 @@ const CombinedComponent: React.FC = () => {
                   map.current = new google.maps.Map(mapContainerRef.current, {
                     center: { lat: latitude, lng: longitude },
                     zoom: 12,
-                    styles: darkModeStyle, // Apply Google dark mode style here
+                    styles: darkModeStyle, 
                   });
                   
 
@@ -184,7 +184,7 @@ const CombinedComponent: React.FC = () => {
     initializeMap();
   }, []);
 
-  // Function to geocode the location input and update map position
+
   const updateMapLocation = async (location: string) => {
     try {
       const response = await fetch(
@@ -198,11 +198,11 @@ const CombinedComponent: React.FC = () => {
           map.current.setCenter({ lat, lng });
           map.current.setZoom(14);
 
-          // Clear previous markers
+        
           markersRef.current.forEach((marker) => marker.setMap(null));
           markersRef.current = [];
 
-          // Add new marker
+         
           const marker = new google.maps.Marker({
             position: { lat, lng },
             map: map.current,
@@ -220,10 +220,10 @@ const CombinedComponent: React.FC = () => {
     }
   };
 
-  // Function to handle location input from Sidebar
+
   const handleLocationInput = (location: string) => {
     setLocationInput(location);
-    updateMapLocation(location); // Update the map when input changes
+    updateMapLocation(location); 
   };
 
   return (

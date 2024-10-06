@@ -33,7 +33,7 @@ const Public = () => {
                 });
             }} className="flex flex-col h-full">
                 <div className='flex flex-col mx-auto py-24 px-8 max-w-4xl text-center'>
-                    {/* Intro Section */}
+                 
                     <div className='flex flex-col mx-auto py-24 px-8 max-w-4xl text-center'>
                         <h1 className='mb-4 mt-10 lg:text-6xl font-bold bg-gradient-to-r from-indigo-400 to-red-600 inline-block text-transparent bg-clip-text'>
                             Hello,
@@ -49,7 +49,7 @@ const Public = () => {
                         </h2>
                     </div>
 
-                    {/* Chat Display */}
+                
                     <div className='flex flex-col items-center space-y-4 mx-auto max-w-4xl px-8 flex-grow overflow-auto'>
                         {messages.map((m, index) => (
                             <div 
@@ -61,7 +61,7 @@ const Public = () => {
                         ))}
                     </div>
 
-                    {/* Input Section */}
+            
                     <div className="relative flex justify-center items-center mt-8 w-full">
                         <div className="fixed bottom-4 left-0 right-0 flex justify-center items-center">
                             <div className="flex items-center bg-gray-800 shadow-lg rounded-full w-full max-w-2xl px-4 py-2">

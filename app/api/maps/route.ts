@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { NextRequest, NextResponse } from 'next/server';
 
-const API_KEY = '03c48dae07364cabb7f121d8c1519492'; // Replace with your actual API key
+const API_KEY = '03c48dae07364cabb7f121d8c1519492'; 
 
 export async function POST(req: NextRequest) {
     if (req.method === 'POST') {
@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
             return { status: 400, json: { error: 'Location is required' } };
         }
         console.log('Received location:', location);    
-        // Fetch coordinates from OpenCage API
+       
         const apiUrl = `https://api.opencagedata.com/geocode/v1/json?q=${encodeURIComponent(location)}&key=${API_KEY}&no_annotations=1&language=en`;
 
         try {

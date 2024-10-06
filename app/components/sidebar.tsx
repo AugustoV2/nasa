@@ -6,7 +6,7 @@ import { RiEarthquakeFill } from 'react-icons/ri';
 import { FaTemperatureLow, FaWater, FaCloudShowersWater } from 'react-icons/fa6';
 import { MdEmergencyShare, MdAir } from 'react-icons/md';
 import { TbUvIndex } from 'react-icons/tb';
-import { BsChatDots } from 'react-icons/bs'; // Chat icon
+import { BsChatDots } from 'react-icons/bs'; 
 import Link from 'next/link';
 import { MdNetworkCell } from "react-icons/md";
 
@@ -39,7 +39,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onLocationSubmit }) => {
         <div className="h-full px-3 py-4 overflow-y-auto bg-black dark:bg-black">
           <ul className="space-y-2 font-medium">
             
-            {/* Search Location Form */}
+           
             <li>
               <form className="flex items-center max-w-lg mx-auto" onSubmit={handleSubmit}>
                 <label htmlFor="voice-search" className="sr-only">Search</label>
@@ -91,24 +91,24 @@ const Sidebar: React.FC<SidebarProps> = ({ onLocationSubmit }) => {
               </form>
             </li>
 
-            {/* Icon Grid with uniform size and consistent button design */}
+         
             <li className="grid grid-cols-3 gap-4 mt-4 pt-10">
               
-              {/* Earthquake Icon */}
+              {/* earthquake  */}
               <div className="p-4 border-4 border-transparent bg-gray-900 shadow-lg rounded-lg hover:scale-105 transition-transform duration-200">
                 <Link href="components/earthquake">
                   <RiEarthquakeFill className="text-5xl text-red-400 mx-auto" />
                 </Link>
               </div>
 
-              {/* Temperature Icon */}
+              {/* temperature  */}
               <div className="p-4 border-4 border-transparent bg-gray-900 shadow-lg rounded-lg hover:scale-105 transition-transform duration-200">
                 <Link href="components/temperature">
                   <FaTemperatureLow className="text-5xl text-blue-400 mx-auto" />
                 </Link>
               </div>
 
-              {/* Air Quality Icon */}
+              {/* air quality  */}
               <div className="p-4 border-4 border-transparent bg-gray-900 shadow-lg rounded-lg hover:scale-105 transition-transform duration-200">
                 <Link href="components/airquality">
                   <MdAir className="text-5xl text-green-400 mx-auto" />
@@ -117,21 +117,21 @@ const Sidebar: React.FC<SidebarProps> = ({ onLocationSubmit }) => {
 
              
 
-              {/* Precipitation Icon */}
+              {/* precipitation  */}
               <div className="p-4 border-4 border-transparent bg-gray-900 shadow-lg rounded-lg hover:scale-105 transition-transform duration-200">
                 <Link href="components/precipitation">
                   <FaCloudShowersWater className="text-5xl text-light-blue-400 mx-auto" />
                 </Link>
               </div>
 
-              {/* Emergency Icon */}
+              {/* emergency  */}
               <div className="p-4 border-4 border-transparent bg-gray-900 shadow-lg rounded-lg hover:scale-105 transition-transform duration-200">
                 <Link href="components/emergency">
                   <MdEmergencyShare className="text-5xl text-red-500 mx-auto" />
                 </Link>
               </div>
 
-              {/* Water Quality Icon */}
+              {/* water Quality  */}
               <div className="p-4 border-4 border-transparent bg-gray-900 shadow-lg rounded-lg hover:scale-105 transition-transform duration-200">
                 <Link href="components/water">
                   <FaWater className="text-5xl text-blue-500 mx-auto" />
@@ -147,7 +147,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onLocationSubmit }) => {
 
             </li>
 
-            {/* Chat Option */}
+           
             <li className="mt-4">
               <Link href="components/chat">
                 <div className="flex items-center space-x-3 p-4 border-4 border-transparent bg-gray-900 shadow-lg rounded-lg hover:scale-105 transition-transform duration-200">
